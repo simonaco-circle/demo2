@@ -10,7 +10,7 @@ jobs:
           command: npm install
       - run:
           name: build
-          command: ng  -- build --prod --aot --no-progress
+          command: npm ng -- build --prod --aot --no-progress
       - run:
           name: test
-          command: ng  -- test --sr --no-progress
+          command: npm ng -- test --sr --no-progress

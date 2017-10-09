@@ -21,3 +21,7 @@ jobs:
           key: dependency-cache-{{ checksum "package.json"}}
           paths:
             - node_modules
+      # Deploy production
+      - deploy:
+          command: |
+            ./scripts/publish.sh production;

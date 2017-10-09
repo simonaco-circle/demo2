@@ -4,6 +4,7 @@ jobs:
     working_directory: ~/repo
     docker:
       - image: circleci/node:6-browsers
+    parallelism: 4
     steps:
       - checkout
       - restore-cache:

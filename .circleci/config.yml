@@ -7,10 +7,13 @@ jobs:
       - checkout
       - run:
           name: install dependencies
-          command: yarn install
+          command: npm install
       - run:
           name: build
-          command: yarn ng -- build --prod --aot --no-progress
+          command: - ng build --prod --aot --no-progress
       - run:
           name: test
-          command: yarn ng -- test --sr --no-progress
+          command: - ng test --sr --no-progress
+      - run:
+          name: lint
+          command: - ng lint

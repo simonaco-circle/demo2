@@ -6,11 +6,11 @@ jobs:
     steps:
       - checkout
       - run:
-          name: install
-          command: npm install
+          name: install dependencies
+          command: yarn install
       - run:
           name: build
-          command: npm ng -- build --prod --aot --no-progress
+          command: yarn ng -- build --prod --aot --no-progress
       - run:
           name: test
-          command: npm ng -- test --sr --no-progress
+          command: yarn ng -- test --sr --no-progress
